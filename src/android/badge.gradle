@@ -16,12 +16,13 @@
  */
 
 repositories {
+    google()
     mavenCentral()
     maven { url 'https://jitpack.io' }
 }
 
 if (!project.ext.has('appShortcutBadgerVersion')) {
-    ext.appShortcutBadgerVersion = 'master-SNAPSHOT'
+    ext.appShortcutBadgerVersion = '-SNAPSHOT'
 }
 
 if (!project.ext.has('appShortcutBadgerCustom')) {
