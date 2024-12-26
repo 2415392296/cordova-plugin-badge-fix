@@ -22,7 +22,7 @@ repositories {
 }
 
 if (!project.ext.has('appShortcutBadgerVersion')) {
-    ext.appShortcutBadgerVersion = '-SNAPSHOT'
+    ext.appShortcutBadgerVersion = 'master'
 }
 
 if (!project.ext.has('appShortcutBadgerCustom')) {
