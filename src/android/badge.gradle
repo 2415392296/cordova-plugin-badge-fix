@@ -20,11 +20,11 @@ repositories {
 }
 
 if (!project.ext.has('appShortcutBadgerVersion')) {
-    ext.appShortcutBadgerVersion = '1.1.22'
+    ext.appShortcutBadgerVersion = 'master-SNAPSHOT'
 }
 
 if (!project.ext.has('appShortcutBadgerCustom')) {
     dependencies {
-        implementation "me.leolin:ShortcutBadger:${appShortcutBadgerVersion}@aar"
+        implementation "com.github.amosschann:ShortcutBadger:${appShortcutBadgerVersion}"
     }
 }
