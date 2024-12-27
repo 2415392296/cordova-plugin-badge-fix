@@ -23,9 +23,9 @@ import android.content.SharedPreferences;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.github.amosschann.shortcutbadger.ShortcutBadger;
-import static com.github.amosschann.shortcutbadger.ShortcutBadger.isBadgeCounterSupported;
+import me.leolin.shortcutbadger.ShortcutBadger;
 
+import static me.leolin.shortcutbadger.ShortcutBadger.isBadgeCounterSupported;
 
 /**
  * Implementation of the badge interface methods.
