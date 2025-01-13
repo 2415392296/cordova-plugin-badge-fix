@@ -59,24 +59,6 @@ exports.set = function (badge, callback, scope) {
     }, this);
 };
 
-/**
- * Sets the xiaomi badge number.
- *
- * @param [ Int ]      badge    The new badge number.
- * @param [ Function ] callback The callback function to be execute later.
- * @param [ Function ] scope    Optional scope for the callback function.
- *
- * @return [ Void ]
- */
-exports.setXiaoMi = function (badge, callback, scope) {
-    var args = [parseInt(badge) || 0];
-
-    this.requestPermission(function (granted) {
-        if (granted) {
-            this.exec('setXiaoMi', args, callback, scope);
-        }
-    }, this);
-};
 
 /**
  * Gets the badge of the app icon.
