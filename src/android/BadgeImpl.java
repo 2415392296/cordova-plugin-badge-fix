@@ -97,27 +97,6 @@ public final class BadgeImpl {
         ShortcutBadger.applyCount(ctx, badge);
     }
 
-       /**
-     * Set the xiaomi badge number.
-     *
-     * @param badge The number to set as the badge number.
-     */
-    public void setXiaoMiBadge (int badge) {
-        saveBadge(badge);
-        Notification.Builder builder = new Notification.Builder(getApplicationContext())
-                .setContentTitle("")
-                .setContentText("")
-                .setSmallIcon(R.drawable.ic_launcher);
-       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    setupNotificationChannel();
-    
-                    builder.setChannelId(NOTIFICATION_CHANNEL);
-                }
-
-        Notification notification = builder.build();
-        // getApplicationContext()
-        ShortcutBadger.applyNotification(ctx, notification, badge);
-    }
 
     /**
      * Get the persisted config map.
