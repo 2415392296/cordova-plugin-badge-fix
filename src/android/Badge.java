@@ -71,6 +71,9 @@ public class Badge extends CordovaPlugin {
         else if (action.equalsIgnoreCase("set")) {
             setBadge(args, callback);
         }
+        else if (action.equalsIgnoreCase("setXiaoMi")) {
+            setXiaoMiBadge(args, callback);
+        }
         else if (action.equalsIgnoreCase("check")) {
             checkSupport(callback);
         }
