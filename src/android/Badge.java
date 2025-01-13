@@ -162,6 +162,26 @@ public class Badge extends CordovaPlugin {
     }
 
     /**
+     * Set the xiaomi badge number.
+     *
+     * @param args     The number to set as the badge number.
+     * @param callback The function to be exec as the callback.
+     */
+    private void setXiaoMiBadge (final JSONArray args,
+                           final CallbackContext callback) {
+
+        cordova.getThreadPool().execute(new Runnable() {
+            @Override
+            public void run() {
+                impl.clearBadge();
+                impl.setXiaoMiBadge(args.optInt(0));
+                int badge = impl.getBadge();
+                callback.success(badge);
+            }
+        });
+    }
+
+    /**
      * Check support for badges.
      *
      * @param callback The function to be exec as the callback.
