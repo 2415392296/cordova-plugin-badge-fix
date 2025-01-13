@@ -18,7 +18,6 @@
 package de.appplant.cordova.plugin.badge;
 
 import android.content.Context;
-import android.app.Notification;
 import android.content.SharedPreferences;
 
 import org.json.JSONException;
